@@ -37,6 +37,72 @@
         </nav>
     </header>
 
+    <main>
+        <div class="container">
+            <!-- Button -->
+             <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addtask">Add Task</button>
+
+             <!-- Card -->
+              <div class="card mt-3">
+                <div class="card-header">
+                    Task list
+                </div>
+                <div class="card-body">
+                    <!-- list group -->
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item active d-flex justify-content-between align-items-center">
+                            Task 1
+                            <!-- Badge -->
+                            <span class="badge bg-success rounded-pill">New</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Task 2
+                            <span class="badge bg-warning rounded-pill">In progess</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            Task 3
+                            <span class="badge bg-danger rounded-pill">canceled</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Modal -->
+                 <div class="modal fade" id="addtask">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Add Task</h5>
+                            </div>
+                            <div class="modal-body">
+                                <form action="">
+                                    <div class="mb-3">
+                                        <label for="taskName" class="form-label">Task Name</label>
+                                        <input class="form-control" id="taskName" type="text" placeholder="Enter Task Name">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="taskDes">Task description</label>
+                                        <textarea class="form-control" id="taskDes" type="text" placeholder="Enter Task description"></textarea>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="taskStatus">Task Status</label>
+                                        <select class="form-select" name="" id="taskStatus">
+                                            <option selected>New</option>
+                                            <option>In Progress</option>
+                                            <option>Completed</option>
+                                            <option>Canceled</option>
+                                        </select>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary">Save Task</button>
+                                <button class="btn btn-secondary">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+              </div>
+        </div>
+    </main>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
